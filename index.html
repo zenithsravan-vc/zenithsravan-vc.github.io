@@ -5,154 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Resume Portal</title>
     <style>
-        /* Modern Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
+        /* Simple, basic styling */
         body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: Arial, sans-serif;
             padding: 20px;
         }
 
         .container {
-            max-width: 850px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* Header Section */
+        /* Basic Header */
         header {
             text-align: center;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         header h1 {
-            color: #1a365d;
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-        }
-
-        header p {
-            color: #4a5568;
-            font-weight: 500;
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
         .contact-info {
-            margin-top: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 0.9rem;
+            margin-top: 10px;
         }
 
-        .contact-info a {
-            color: #3182ce;
-            text-decoration: none;
+        .contact-info span {
+            margin: 0 10px;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Layout & Sections */
+        /* Simple Sections without boxes or lines */
         section {
             margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 1.3rem;
-            color: #2b6cb0;
-            border-bottom: 2px solid #ebf8ff;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 10px;
         }
 
-        /* Responsive 2-Column Grid (No media queries needed) */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        /* Lists */
+        /* Simple Lists */
         ul {
-            list-style-position: inside;
-            margin-left: 5px;
+            margin-left: 20px;
+            margin-top: 5px;
         }
 
-        ul li {
-            margin-bottom: 8px;
-            color: #4a5568;
+        li {
+            margin-bottom: 5px;
         }
 
-        /* Education */
-        .edu-item {
+        /* Basic Experience and Project layout */
+        .item {
             margin-bottom: 15px;
         }
 
-        .edu-meta {
-            display: flex;
-            justify-content: space-between;
-            color: #718096;
-            font-size: 0.95rem;
-            flex-wrap: wrap;
-        }
-
-        .edu-grade {
-            font-size: 0.9rem;
-            color: #4a5568;
-            margin-top: 2px;
-        }
-
-        /* Projects */
-        .project-card {
-            background: #f7fafc;
-            border-left: 4px solid #3182ce;
-            padding: 15px;
-            margin-bottom: 12px;
-            border-radius: 0 6px 6px 0;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .project-title {
+        .item-title {
             font-weight: bold;
-            color: #2d3748;
         }
 
-        .project-tech {
-            font-size: 0.75rem;
-            background: #ebf8ff;
-            color: #2b6cb0;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .project-desc {
+        .item-meta {
+            color: #666;
             font-size: 0.9rem;
-            color: #4a5568;
+        }
+
+        .item-desc {
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -165,107 +87,98 @@
             <h1>Zenith Sravan VC</h1>
             <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
             <div class="contact-info">
-                <span>📧 <a href="mailto:sravan.23mic7117@vitapstudent.ac.in">sravan.23mic7117@vitapstudent.ac.in</a></span>
-                <span>📞 +91 98765 43210</span>
-                <span>💻 <a href="https://github.com/zenithsravan-vc" target="_blank">GitHub</a></span>
+                <span>Email: <a href="mailto:sravan.23mic7117@vitapstudent.ac.in">sravan.23mic7117@vitapstudent.ac.in</a></span> | 
+                <span>Phone: +91 98765 43210</span> | 
+                <span>GitHub: <a href="https://github.com/zenithsravan-vc" target="_blank">GitHub Link</a></span>
             </div>
         </header>
 
         <!-- Profile Summary -->
         <section>
             <h2>Profile Summary</h2>
-            <p style="color: #4a5568;">
+            <p>
                 Integrated M.Tech CSE student at VIT-AP. I build IoT and cloud applications, automate software, and use my skills in digital media marketing and video editing to bridge the gap between technical development and creative digital outreach.
             </p>
+        </section>
+
+        <!-- Work Experience -->
+        <section>
+            <h2>Work Experience</h2>
+            <div class="item">
+                <p class="item-title">YouTube Content Creator</p>
+                <p class="item-meta">Personal Channel</p>
+                <p class="item-desc">Create, edit, and upload videos for my personal YouTube channel, focusing on video editing, content planning, and managing viewer engagement.</p>
+            </div>
+            <div class="item">
+                <p class="item-title">Social Media & Video Editor</p>
+                <p class="item-meta">Family Business</p>
+                <p class="item-desc">Handle social media presence and edit marketing videos for my brother's business to boost brand reach and customer interaction.</p>
+            </div>
         </section>
 
         <!-- Education -->
         <section>
             <h2>Education</h2>
-            <div class="edu-item">
-                <h4 style="color: #2d3748;">VIT-AP University</h4>
-                <div class="edu-meta">
-                    <span>Integrated M.Tech in Computer Science and Engineering</span>
-                    <span>Expected Graduation: 2028</span>
-                </div>
-                <p class="edu-grade">CGPA: 8.46/10</p>
+            <div class="item">
+                <p class="item-title">VIT-AP University</p>
+                <p class="item-meta">Integrated M.Tech in Computer Science and Engineering (Expected 2028)</p>
+                <p class="item-desc">CGPA: 8.46/10</p>
             </div>
-            <div class="edu-item">
-                <h4 style="color: #2d3748;">Narayana Educational Institution</h4>
-                <div class="edu-meta">
-                    <span>Class XII (State Board)</span>
-                    <span>Year: 2022</span>
-                </div>
-                <p class="edu-grade">Percentage: 94%</p>
+            <div class="item">
+                <p class="item-title">Narayana Educational Institution</p>
+                <p class="item-meta">Class XII (State Board) - 2022</p>
+                <p class="item-desc">Percentage: 94%</p>
             </div>
         </section>
 
-        <!-- Skills & Interests Grid -->
-        <div class="grid-2">
-            
-            <section>
-                <h2>Career Interests</h2>
-                <ul>
-                    <li><strong>Digital Media Marketing</strong> (SEO, strategy, brand campaigns)</li>
-                    <li><strong>Video Editing</strong> (Post-production, visual pacing)</li>
-                    <li><strong>Content Creation</strong> (Tech blogging, copy-writing, design)</li>
-                </ul>
-            </section>
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JS</li>
+                <li><strong>IoT:</strong> Arduino, Raspberry Pi, Sensors</li>
+                <li><strong>Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
+                <li><strong>Creative:</strong> Premiere Pro, Canva</li>
+            </ul>
+        </section>
 
-            <section>
-                <h2>Technical Skills</h2>
-                <ul>
-                    <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JS</li>
-                    <li><strong>IoT:</strong> Arduino, Raspberry Pi, Sensors</li>
-                    <li><strong>Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
-                    <li><strong>Creative:</strong> Premiere Pro, Canva</li>
-                </ul>
-            </section>
-
-        </div>
+        <!-- Career Interests -->
+        <section>
+            <h2>Career Interests</h2>
+            <ul>
+                <li><strong>Digital Media Marketing</strong> (SEO, strategy, brand campaigns)</li>
+                <li><strong>Video Editing</strong> (Post-production, visual pacing)</li>
+                <li><strong>Content Creation</strong> (Tech blogging, copy-writing, design)</li>
+            </ul>
+        </section>
 
         <!-- Projects -->
         <section>
             <h2>Academic & Personal Projects</h2>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-title">1. Medicine Organising Robot</span>
-                    <span class="project-tech">Arduino</span>
-                </div>
-                <p class="project-desc">Designed a smart automated dispensing robot to assist patients with scheduled medications using sensors, motors, and Arduino.</p>
+            <div class="item">
+                <p class="item-title">1. Medicine Organising Robot (Arduino)</p>
+                <p class="item-desc">Designed a smart automated dispensing robot to assist patients with scheduled medications using sensors, motors, and Arduino.</p>
             </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-title">2. Sleep Detection System</span>
-                    <span class="project-tech">Raspberry Pi</span>
-                </div>
-                <p class="project-desc">Developed a real-time driver drowsiness alert system using a camera module and computer vision on Raspberry Pi.</p>
+            <div class="item">
+                <p class="item-title">2. Sleep Detection System (Raspberry Pi)</p>
+                <p class="item-desc">Developed a real-time driver drowsiness alert system using a camera module and computer vision on Raspberry Pi.</p>
             </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-title">3. Cryptocurrency Tracker</span>
-                    <span class="project-tech">Cloud & Web API</span>
-                </div>
-                <p class="project-desc">Created and cloud-deployed a real-time cryptocurrency monitoring dashboard pulling data from public Web APIs.</p>
+            <div class="item">
+                <p class="item-title">3. Cryptocurrency Tracker (Cloud & Web API)</p>
+                <p class="item-desc">Created and cloud-deployed a real-time cryptocurrency monitoring dashboard pulling data from public Web APIs.</p>
             </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-title">4. Ticket Booking System</span>
-                    <span class="project-tech">HTML, CSS & JS</span>
-                </div>
-                <p class="project-desc">Built a responsive front-end movie seat booking interface featuring dynamic price calculations and seating layouts.</p>
+            <div class="item">
+                <p class="item-title">4. Ticket Booking System (HTML, CSS & JS)</p>
+                <p class="item-desc">Built a responsive front-end movie seat booking interface featuring dynamic price calculations and seating layouts.</p>
             </div>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-title">5. Fitness Tracker with Genkit</span>
-                    <span class="project-tech">GenAI / Automation</span>
-                </div>
-                <p class="project-desc">Engineered an AI fitness app that analyzes user logs and automates personalized workouts using Firebase Genkit.</p>
+            <div class="item">
+                <p class="item-title">5. Fitness Tracker with Genkit (GenAI / Automation)</p>
+                <p class="item-desc">Engineered an AI fitness app that analyzes user logs and automates personalized workouts using Firebase Genkit.</p>
             </div>
 
         </section>
