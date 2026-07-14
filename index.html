@@ -128,4 +128,174 @@
         .project-card {
             background: #f7fafc;
             border-left: 4px solid #3182ce;
-            padding
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2d3748;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        /* Education timeline style */
+        .edu-item {
+            margin-bottom: 15px;
+        }
+
+        .edu-item h4 {
+            color: #2d3748;
+            font-size: 1.1rem;
+        }
+
+        .edu-meta {
+            font-size: 0.9rem;
+            color: #718096;
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Your Name</h1>
+            <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:your.email@vitap.ac.in">your.email@vitap.ac.in</a></span>
+                <span>📞 +91 98765 43210</span>
+                <span>🌐 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com/yourusername" target="_blank">GitHub</a></span>
+            </div>
+        </header>
+
+        <section class="summary">
+            <h2>Profile Summary</h2>
+            <p>
+                Enthusiastic and detail-oriented Integrated M.Tech CSE student at VIT-AP with hands-on experience in IoT, cloud-based applications, and software automation. Possesses a unique blend of technical expertise and creative marketing skills, actively seeking opportunities to bridge tech development with digital outreach.
+            </p>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <h4>VIT-AP University</h4>
+                <div class="edu-meta">
+                    <span>Integrated M.Tech in Computer Science and Engineering</span>
+                    <span>Expected Graduation: 2027</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 2px;">CGPA: X.XX/10 (Update your CGPA)</p>
+            </div>
+            <div class="edu-item">
+                <h4>Your High School Name</h4>
+                <div class="edu-meta">
+                    <span>Class XII (State Board / CBSE / ICSE)</span>
+                    <span>Year: 2022</span>
+                </div>
+                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 2px;">Percentage / GPA: XX%</p>
+            </div>
+        </section>
+
+        <div class="grid-2">
+            
+            <section class="interests">
+                <h2>Career Interests</h2>
+                <ul>
+                    <li><strong>Digital Media Marketing</strong> (SEO, social media strategy, brand campaigns)</li>
+                    <li><strong>Video Editing</strong> (Post-production, narrative cutting, pacing, and visual effects)</li>
+                    <li><strong>Content Creation</strong> (Tech blogging, copy-writing, graphic design, and digital media storytelling)</li>
+                </ul>
+            </section>
+
+            <section class="skills">
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JavaScript</li>
+                    <li><strong>IoT & Embedded:</strong> Arduino, Raspberry Pi, Sensors, Microcontrollers</li>
+                    <li><strong>Frameworks & Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
+                    <li><strong>Creative Tools:</strong> Premiere Pro / DaVinci Resolve, Photoshop, Canva</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <section class="projects">
+            <h2>Academic & Personal Projects</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">1. Medicine Organising Robot</span>
+                    <span class="project-tech">Arduino</span>
+                </div>
+                <p class="project-desc">Designed and built a smart automated container/robot to assist patients in sorting and dispensing medication at scheduled times. Handled hardware integrations using various sensors, motors, and Arduino programming.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">2. Sleep Detection System</span>
+                    <span class="project-tech">Raspberry Pi</span>
+                </div>
+                <p class="project-desc">Developed a real-time driver sleepiness/fatigue detection program utilizing a camera module connected to Raspberry Pi. Implemented computer vision techniques to analyze eye closure and trigger alert alarms.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">3. Cryptocurrency Tracker</span>
+                    <span class="project-tech">Cloud & Web API</span>
+                </div>
+                <p class="project-desc">Created a dynamic dashboard that fetches and monitors live cryptocurrency values from public APIs. Deployed the application on a cloud platform to ensure high availability and real-time data sync.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">4. Ticket Booking System</span>
+                    <span class="project-tech">HTML, CSS & JS</span>
+                </div>
+                <p class="project-desc">Designed an interactive front-end system for movies/events seat booking. Features include seat selection maps, price calculators, and sleek responsiveness built completely from scratch using clean web code.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-title">5. Fitness Tracker with Genkit Automation</span>
+                    <span class="project-tech">GenAI / Genkit / Automation</span>
+                </div>
+                <p class="project-desc">Engineered an AI-driven fitness tracking application that analyzes user logs and customizes training schedules. Integrated Firebase Genkit to automate personalized dietary and workout suggestions based on real-time metrics.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
