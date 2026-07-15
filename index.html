@@ -4,29 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Resume Portal</title>
-
     <style>
-        /* Basic Page Styling */
+        /* Simple, basic styling */
         body {
             background-color: #ffffff;
             color: #333333;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 30px;
+            padding: 20px;
         }
 
-        /* Resume Container with Border */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px;
-            border: 2px solid #333333;
-            border-radius: 8px;
-            box-sizing: border-box;
-            background-color: #ffffff;
+            padding: 20px;
         }
 
-        /* Header */
+        /* Basic Header */
         header {
             text-align: center;
             margin-bottom: 30px;
@@ -45,18 +38,18 @@
             margin: 0 10px;
         }
 
-        /* Sections */
+        /* Simple Sections without boxes or lines */
         section {
             margin-bottom: 30px;
         }
 
         h2 {
             font-size: 1.4rem;
-            color: #333333;
+            color: #333;
             margin-bottom: 10px;
         }
 
-        /* Lists */
+        /* Simple Lists */
         ul {
             margin-left: 20px;
             margin-top: 5px;
@@ -66,7 +59,7 @@
             margin-bottom: 5px;
         }
 
-        /* Items */
+        /* Basic Experience and Project layout */
         .item {
             margin-bottom: 15px;
         }
@@ -76,184 +69,121 @@
         }
 
         .item-meta {
-            color: #666666;
+            color: #666;
             font-size: 0.9rem;
         }
 
         .item-desc {
             margin-top: 5px;
         }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-
-            .container {
-                padding: 25px;
-            }
-
-            .contact-info span {
-                display: block;
-                margin: 6px 0;
-            }
-        }
     </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <h1>Zenith Sravan VC</h1>
+            <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
+            <div class="contact-info">
+                <span>Email: <a href="mailto:sravan.23mic7117@vitapstudent.ac.in">sravan.23mic7117@vitapstudent.ac.in</a></span> | 
+                <span>Phone: +91 98765 43210</span> | 
+                <span>GitHub: <a href="https://github.com/zenithsravan-vc" target="_blank">GitHub Link</a></span>
+            </div>
+        </header>
 
-    <!-- Header -->
-    <header>
-        <h1>Zenith Sravan VC</h1>
-        <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
-
-        <div class="contact-info">
-            <span>Email:
-                <a href="mailto:sravan.23mic7117@vitapstudent.ac.in">
-                    sravan.23mic7117@vitapstudent.ac.in
-                </a>
-            </span>
-            |
-            <span>Phone: +91 98765 43210</span>
-            |
-            <span>GitHub:
-                <a href="https://github.com/zenithsravan-vc" target="_blank">
-                    GitHub Link
-                </a>
-            </span>
-        </div>
-    </header>
-
-    <!-- Profile Summary -->
-    <section>
-        <h2>Profile Summary</h2>
-        <p>
-            Integrated M.Tech CSE student at VIT-AP. I build IoT and cloud
-            applications, automate software, and use my skills in digital media
-            marketing and video editing to bridge the gap between technical
-            development and creative digital outreach.
-        </p>
-    </section>
-
-    <!-- Work Experience -->
-    <section>
-        <h2>Work Experience</h2>
-
-        <div class="item">
-            <p class="item-title">YouTube Content Creator</p>
-            <p class="item-meta">Personal Channel</p>
-            <p class="item-desc">
-                Create, edit, and upload videos for my personal YouTube channel,
-                focusing on video editing, content planning, and managing viewer
-                engagement.
+        <!-- Profile Summary -->
+        <section>
+            <h2>Profile Summary</h2>
+            <p>
+                Integrated M.Tech CSE student at VIT-AP. I build IoT and cloud applications, automate software, and use my skills in digital media marketing and video editing to bridge the gap between technical development and creative digital outreach.
             </p>
-        </div>
+        </section>
 
-        <div class="item">
-            <p class="item-title">Social Media & Video Editor</p>
-            <p class="item-meta">Family Business</p>
-            <p class="item-desc">
-                Handle social media presence and edit marketing videos for my
-                brother's business to boost brand reach and customer interaction.
-            </p>
-        </div>
-    </section>
+        <!-- Work Experience -->
+        <section>
+            <h2>Work Experience</h2>
+            <div class="item">
+                <p class="item-title">YouTube Content Creator</p>
+                <p class="item-meta">Personal Channel</p>
+                <p class="item-desc">Create, edit, and upload videos for my personal YouTube channel, focusing on video editing, content planning, and managing viewer engagement.</p>
+            </div>
+            <div class="item">
+                <p class="item-title">Social Media & Video Editor</p>
+                <p class="item-meta">Family Business</p>
+                <p class="item-desc">Handle social media presence and edit marketing videos for my brother's business to boost brand reach and customer interaction.</p>
+            </div>
+        </section>
 
-    <!-- Education -->
-    <section>
-        <h2>Education</h2>
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="item">
+                <p class="item-title">VIT-AP University</p>
+                <p class="item-meta">Integrated M.Tech in Computer Science and Engineering (Expected 2028)</p>
+                <p class="item-desc">CGPA: 8.46/10</p>
+            </div>
+            <div class="item">
+                <p class="item-title">Narayana Educational Institution</p>
+                <p class="item-meta">Class XII (State Board) - 2022</p>
+                <p class="item-desc">Percentage: 94%</p>
+            </div>
+        </section>
 
-        <div class="item">
-            <p class="item-title">VIT-AP University</p>
-            <p class="item-meta">
-                Integrated M.Tech in Computer Science and Engineering
-                (Expected 2028)
-            </p>
-            <p class="item-desc">CGPA: 8.46 / 10</p>
-        </div>
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JS</li>
+                <li><strong>IoT:</strong> Arduino, Raspberry Pi, Sensors</li>
+                <li><strong>Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
+                <li><strong>Creative:</strong> Premiere Pro, Canva</li>
+            </ul>
+        </section>
 
-        <div class="item">
-            <p class="item-title">Narayana Educational Institution</p>
-            <p class="item-meta">Class XII (State Board) - 2022</p>
-            <p class="item-desc">Percentage: 94%</p>
-        </div>
-    </section>
+        <!-- Career Interests -->
+        <section>
+            <h2>Career Interests</h2>
+            <ul>
+                <li><strong>Digital Media Marketing</strong> (SEO, strategy, brand campaigns)</li>
+                <li><strong>Video Editing</strong> (Post-production, visual pacing)</li>
+                <li><strong>Content Creation</strong> (Tech blogging, copy-writing, design)</li>
+            </ul>
+        </section>
 
-    <!-- Technical Skills -->
-    <section>
-        <h2>Technical Skills</h2>
+        <!-- Projects -->
+        <section>
+            <h2>Academic & Personal Projects</h2>
 
-        <ul>
-            <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JavaScript</li>
-            <li><strong>IoT:</strong> Arduino, Raspberry Pi, Sensors</li>
-            <li><strong>Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
-            <li><strong>Creative:</strong> Adobe Premiere Pro, Canva</li>
-        </ul>
-    </section>
+            <div class="item">
+                <p class="item-title">1. Medicine Organising Robot (Arduino)</p>
+                <p class="item-desc">Designed a smart automated dispensing robot to assist patients with scheduled medications using sensors, motors, and Arduino.</p>
+            </div>
 
-    <!-- Career Interests -->
-    <section>
-        <h2>Career Interests</h2>
+            <div class="item">
+                <p class="item-title">2. Sleep Detection System (Raspberry Pi)</p>
+                <p class="item-desc">Developed a real-time driver drowsiness alert system using a camera module and computer vision on Raspberry Pi.</p>
+            </div>
 
-        <ul>
-            <li><strong>Digital Media Marketing</strong> (SEO, Strategy, Brand Campaigns)</li>
-            <li><strong>Video Editing</strong> (Post-production, Visual Storytelling)</li>
-            <li><strong>Content Creation</strong> (Tech Blogging, Copywriting, Design)</li>
-        </ul>
-    </section>
+            <div class="item">
+                <p class="item-title">3. Cryptocurrency Tracker (Cloud & Web API)</p>
+                <p class="item-desc">Created and cloud-deployed a real-time cryptocurrency monitoring dashboard pulling data from public Web APIs.</p>
+            </div>
 
-    <!-- Projects -->
-    <section>
-        <h2>Academic & Personal Projects</h2>
+            <div class="item">
+                <p class="item-title">4. Ticket Booking System (HTML, CSS & JS)</p>
+                <p class="item-desc">Built a responsive front-end movie seat booking interface featuring dynamic price calculations and seating layouts.</p>
+            </div>
 
-        <div class="item">
-            <p class="item-title">1. Medicine Organising Robot (Arduino)</p>
-            <p class="item-desc">
-                Designed a smart automated dispensing robot to assist patients
-                with scheduled medications using sensors, motors, and Arduino.
-            </p>
-        </div>
+            <div class="item">
+                <p class="item-title">5. Fitness Tracker with Genkit (GenAI / Automation)</p>
+                <p class="item-desc">Engineered an AI fitness app that analyzes user logs and automates personalized workouts using Firebase Genkit.</p>
+            </div>
 
-        <div class="item">
-            <p class="item-title">2. Sleep Detection System (Raspberry Pi)</p>
-            <p class="item-desc">
-                Developed a real-time driver drowsiness alert system using a
-                camera module and computer vision on Raspberry Pi.
-            </p>
-        </div>
+        </section>
 
-        <div class="item">
-            <p class="item-title">3. Cryptocurrency Tracker (Cloud & Web API)</p>
-            <p class="item-desc">
-                Created and cloud-deployed a real-time cryptocurrency monitoring
-                dashboard pulling data from public Web APIs.
-            </p>
-        </div>
-
-        <div class="item">
-            <p class="item-title">4. Ticket Booking System (HTML, CSS & JavaScript)</p>
-            <p class="item-desc">
-                Built a responsive front-end movie seat booking interface
-                featuring dynamic price calculations and seating layouts.
-            </p>
-        </div>
-
-        <div class="item">
-            <p class="item-title">5. Fitness Tracker with Genkit (GenAI / Automation)</p>
-            <p class="item-desc">
-                Engineered an AI fitness application that analyzes user logs and
-                automates personalized workout recommendations using Firebase
-                Genkit.
-            </p>
-        </div>
-
-    </section>
-
-</div>
+    </div>
 
 </body>
 </html>
