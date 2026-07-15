@@ -25,6 +25,7 @@
             background: #fff;
             padding: 40px;
             border-radius: 12px;
+            border: 1px solid #e2e8f0;
             box-shadow: 0 4px 23px rgba(0, 0, 0, 0.05);
         }
 
@@ -74,16 +75,23 @@
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #2b6cb0;
-            border-bottom: 2px solid #ebf8ff;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
+            border-left: 4px solid #2b6cb0;
+            padding-left: 12px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         /* Profile Summary */
+        .summary {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
         .summary p {
             color: #4a5568;
         }
@@ -93,6 +101,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
+            margin-bottom: 35px;
         }
 
         @media (max-width: 768px) {
@@ -100,6 +109,21 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+        }
+
+        /* Bordered Cards for Grid Sections */
+        .interests, .skills {
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .interests h2, .skills h2 {
+            border-left: 4px solid #3182ce;
+            padding-left: 10px;
+            margin-bottom: 15px;
         }
 
         /* Lists formatting */
@@ -110,7 +134,7 @@
         ul li {
             position: relative;
             padding-left: 20px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             color: #4a5568;
         }
 
@@ -126,24 +150,26 @@
 
         /* Projects Section */
         .project-card {
-            background: #f7fafc;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-left: 4px solid #3182ce;
-            padding: 15px 20px;
-            margin-bottom: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
             border-radius: 0 8px 8px 0;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
 
         .project-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
         }
 
         .project-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .project-title {
@@ -156,9 +182,10 @@
             font-size: 0.8rem;
             background: #ebf8ff;
             color: #2b6cb0;
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 3px 10px;
+            border-radius: 20px;
             font-weight: 600;
+            border: 1px solid #bee3f8;
         }
 
         .project-desc {
@@ -168,12 +195,20 @@
 
         /* Education timeline style */
         .edu-item {
-            margin-bottom: 15px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .edu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .edu-item h4 {
             color: #2d3748;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .edu-meta {
@@ -181,6 +216,7 @@
             color: #718096;
             display: flex;
             justify-content: space-between;
+            margin-top: 2px;
         }
 
     </style>
@@ -193,7 +229,7 @@
             <h1>Zenith Sravan VC</h1>
             <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
             <div class="contact-info">
-                <span>📧 <a href="mailto:your.email@vitap.ac.in">sravan.23mic7117@vitapstudent.ac.in</a></span>
+                <span>📧 <a href="mailto:sravan.23mic7117@vitapstudent.ac.in">sravan.23mic7117@vitapstudent.ac.in</a></span>
                 <span>📞 +91 98765 43210</span>
                 <span>💻 <a href="https://github.com/zenithsravan-vc" target="_blank">GitHub</a></span>
             </div>
@@ -202,7 +238,8 @@
         <section class="summary">
             <h2>Profile Summary</h2>
             <p>
-                ntegrated M.Tech CSE student at VIT-AP. I build IoT and cloud applications, automate software, and use my skills in digital media marketing and video editing to bridge the gap between technical development and creative digital outreach.
+                Integrated M.Tech CSE student at VIT-AP. I build IoT and cloud applications, automate software, and use my skills in digital media marketing and video editing to bridge the gap between technical development and creative digital outreach.
+            </p>
         </section>
 
         <section class="education">
@@ -213,7 +250,7 @@
                     <span>Integrated M.Tech in Computer Science and Engineering</span>
                     <span>Expected Graduation: 2028</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 2px;">CGPA: 8.46/10 </p>
+                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 4px;">CGPA: 8.46/10 </p>
             </div>
             <div class="edu-item">
                 <h4>Narayana Educational Institution</h4>
@@ -221,7 +258,7 @@
                     <span>Class XII (State Board)</span>
                     <span>Year: 2022</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 2px;">Percentage / GPA: 94%</p>
+                <p style="font-size: 0.9rem; color: #4a5568; margin-top: 4px;">Percentage / GPA: 94%</p>
             </div>
         </section>
 
@@ -232,7 +269,7 @@
                 <ul>
                     <li><strong>Digital Media Marketing</strong> (SEO, social media strategy, brand campaigns)</li>
                     <li><strong>Video Editing</strong> (Post-production, narrative cutting, pacing, and visual effects)</li>
-                    <li><strong>Content Creation</strong> (Tech blogging, copy-writing, graphic design, and digital media storytelling)</li>
+                    <li><strong>Content Creation</strong> (Tech blogging, copywriting, graphic design, and digital media storytelling)</li>
                 </ul>
             </section>
 
@@ -242,7 +279,7 @@
                     <li><strong>Languages:</strong> C/C++, Java, Python, HTML5, CSS3, JavaScript</li>
                     <li><strong>IoT & Embedded:</strong> Arduino, Raspberry Pi, Sensors, Microcontrollers</li>
                     <li><strong>Frameworks & Tools:</strong> Firebase Genkit, Git/GitHub, VS Code</li>
-                    <li><strong>Creative Tools:</strong> Premiere Pro /Canva</li>
+                    <li><strong>Creative Tools:</strong> Premiere Pro / Canva</li>
                 </ul>
             </section>
 
