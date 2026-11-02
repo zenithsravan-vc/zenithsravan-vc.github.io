@@ -218,13 +218,219 @@
             justify-content: space-between;
             margin-top: 2px;
         }
+        
+/* LOGIN PAGE STYLING */
+
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e2e8f0, #bfdbfe);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.login-card h1 {
+    text-align: center;
+    color: #1a365d;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+.login-card form > label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e0;
+    border-radius: 7px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #3182ce;
+    box-shadow: 0 0 0 2px rgba(49,130,206,0.15);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.password-container input {
+    flex: 1;
+    min-width: 0;
+}
+
+#togglePassword {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #edf2f7;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remember-container {
+    margin-bottom: 20px;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.remember-container input {
+    margin-right: 6px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #1a365d;
+}
+
+#loginError {
+    color: #e53e3e;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.login-footer {
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.8rem;
+    margin-top: 25px;
+}
+
+/* LOGOUT BUTTON */
+
+.logout-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    padding: 9px 18px;
+    background: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    background: #c53030;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 25px;
+    }
+}
 
     </style>
 </head>
 <body>
+    
+<!-- LOGIN PAGE -->
+<div class="login-wrapper" id="loginPage">
 
-    <div class="container">
-        
+    <div class="login-card">
+
+        <h1>Welcome Back</h1>
+        <p class="login-subtitle">Login to access your portfolio</p>
+
+        <form id="loginForm">
+
+            <label for="userId">User ID</label>
+            <input
+                type="text"
+                id="userId"
+                placeholder="Enter your User ID"
+                required
+            >
+
+            <label for="password">Password</label>
+
+            <div class="password-container">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+                <button type="button" id="togglePassword">
+                    Show
+                </button>
+            </div>
+
+            <div class="remember-container">
+                <label>
+                    <input type="checkbox" id="rememberMe">
+                    Remember me
+                </label>
+            </div>
+
+            <p id="loginError"></p>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <p class="login-footer">
+            Personal Portfolio | Zenith Sravan VC
+        </p>
+
+    </div>
+
+</div>
+<!-- END LOGIN PAGE -->
+
+
+    <div class="container" id="portfolio" style="display: none;">
+        <div class="logout-container">
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+</div>
         <header>
             <h1>Zenith Sravan VC</h1>
             <p>4th Year Integrated M.Tech (CSE) Student | VIT-AP University</p>
@@ -373,6 +579,99 @@
     // Append the Web-SDK script script tag to the HTML page
     document.head.appendChild(webSdkScript);
   })();
+</script>
+
+<script>
+// LOGIN AUTHENTICATION
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Demo credentials
+    const validUserId = "sravan";
+    const validPassword = "Zenith@123";
+
+    const loginPage = document.getElementById("loginPage");
+    const portfolio = document.getElementById("portfolio");
+    const loginForm = document.getElementById("loginForm");
+    const errorMessage = document.getElementById("loginError");
+    const userIdField = document.getElementById("userId");
+    const passwordField = document.getElementById("password");
+    const rememberMeField = document.getElementById("rememberMe");
+    const togglePasswordButton = document.getElementById("togglePassword");
+
+    // Check that the required HTML elements exist
+    if (!loginPage || !portfolio || !loginForm || !errorMessage ||
+        !userIdField || !passwordField || !rememberMeField ||
+        !togglePasswordButton) {
+        console.error("Login setup failed: one or more HTML elements are missing.");
+        return;
+    }
+
+    // Display the portfolio
+    function showPortfolio() {
+        loginPage.style.display = "none";
+        portfolio.style.display = "block";
+    }
+
+    // Login form submission
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const userId = userIdField.value.trim();
+        const password = passwordField.value;
+
+        if (userId === validUserId && password === validPassword) {
+            errorMessage.textContent = "";
+
+            // Clear any previous session choice
+            localStorage.removeItem("portfolioLogin");
+            sessionStorage.removeItem("portfolioLogin");
+
+            if (rememberMeField.checked) {
+                localStorage.setItem("portfolioLogin", "true");
+            } else {
+                sessionStorage.setItem("portfolioLogin", "true");
+            }
+
+            showPortfolio();
+        } else {
+            errorMessage.textContent = "Invalid User ID or Password!";
+        }
+    });
+
+    // Show / Hide password
+    togglePasswordButton.addEventListener("click", function () {
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            togglePasswordButton.textContent = "Hide";
+        } else {
+            passwordField.type = "password";
+            togglePasswordButton.textContent = "Show";
+        }
+    });
+
+    // Logout functionality
+    window.logout = function () {
+        localStorage.removeItem("portfolioLogin");
+        sessionStorage.removeItem("portfolioLogin");
+
+        portfolio.style.display = "none";
+        loginPage.style.display = "flex";
+        loginForm.reset();
+        errorMessage.textContent = "";
+        passwordField.type = "password";
+        togglePasswordButton.textContent = "Show";
+    };
+
+    // Restore login state if Remember me or current-tab session was used
+    const isLoggedIn =
+        localStorage.getItem("portfolioLogin") === "true" ||
+        sessionStorage.getItem("portfolioLogin") === "true";
+
+    if (isLoggedIn) {
+        showPortfolio();
+    }
+});
 </script>
 
 </body>
